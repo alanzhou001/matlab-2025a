@@ -257,6 +257,7 @@ function duration = compute_shielding_duration_3smoke(theta, v_d, t_drop, tau)
     % 初始化遮蔽标志数组
     is_shielded = zeros(size(t_eval));
     
+    % 方法1: 直接使用多烟幕遮蔽判定（推荐）
     % 对每个时间点，使用 is_FullyShielded 判断是否被任一烟幕遮蔽
     for k = 1:length(t_eval)
         t = t_eval(k);
@@ -354,7 +355,7 @@ function [total_time, time_intervals] = verify_solution_3smoke(x)
         
         for i = 1:length(start_idx)
             start_time = t_eval(start_idx(i));
-            end_time = t_eval(end_idx(i));】
+            end_time = t_eval(end_idx(i));
             time_intervals = [time_intervals; start_time, end_time];
         end
     end

@@ -42,9 +42,9 @@ for u = 1:5
         end
         
         % === CEM 训练参数 ===
-        Max_Gen = 50;           % 迭代次数
-        Batch_Size = 200;       % 样本数
-        Elite_Num = 20;         % 精英数
+        Max_Gen = 80;           % 迭代次数
+        Batch_Size = 500;       % 样本数
+        Elite_Num = 65;         % 精英数
         Smoothing = 0.3;        % 平滑因子 (学习率)
         
         % 初始化分布 (归一化空间 [-1, 1])
@@ -148,9 +148,9 @@ Joint_Mu_Init = reshape(Pretrained_Mu', 1, ActionDim_Total);
 Joint_Sigma_Init = 0.8 * ones(1, ActionDim_Total);
 
 % 2. 训练参数
-Max_Gen_Joint = 80;    
-Batch_Size_Joint = 400; % 样本量充足，保证搜索质量
-Elite_Num_Joint = 20;
+Max_Gen_Joint = 5000;    
+Batch_Size_Joint = 2000; % 样本量充足，保证搜索质量
+Elite_Num_Joint = 300;
 
 % --- [关键参数修改] ---
 Penalty_Overlap = 0.1;  % 重叠惩罚很小 (允许配合带来的重叠)

@@ -29,7 +29,7 @@ fprintf('正在启动多轮搜索 (共5轮)...\n');
 
 % === 多轮择优 ===
 Num_Runs = 5;          
-Best_Global_Val = 0;   % 初始化为0 
+Best_Global_Val = 0; 
 Max_Duration_Record = -1; 
 Best_Global_X = zeros(1, 4);
 Best_History = zeros(pso_options.MaxIter, 1);
